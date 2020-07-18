@@ -3,7 +3,7 @@
 
 	require "check_session.php";
 
-	$conn=mysqli_connect("localhost", "root", "root", "bdf");
+	$conn=mysqli_connect("localhost", "root", "", "bdf");
 	if (!$conn) {
 		echo "<h2>Coudn't establish a connection</h2>";
 	}
