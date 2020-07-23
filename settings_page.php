@@ -71,7 +71,7 @@
 		  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
 			  <li class="nav-item pl-md-4 mx-2 order-sm-1">
-				<a class="nav-link " href="http://localhost/ProjectWP/home_page.php"><span><i class="fa fa-home"></i></span>&nbsp;Home <span class="sr-only">(current)</span></a>
+				<a class="nav-link " href="http://localhost/ProjectWP/index.php"><span><i class="fa fa-home"></i></span>&nbsp;Home <span class="sr-only">(current)</span></a>
 			  </li>
 		
 			  <li class="nav-item mx-2  order-sm-2">

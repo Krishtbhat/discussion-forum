@@ -90,7 +90,7 @@
 	</div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav"> 
-        <li class="navbar-item"><a href="http://localhost/ProjectWP/home_page.php"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
+        <li class="navbar-item"><a href="http://localhost/ProjectWP/index.php"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
         <li class="navbar-item active">
 			<a href="http://localhost/ProjectWP/profile_page.php" class="nav-link"><span class="glyphicon glyphicon-user"></span> 
 			<?php echo $_SESSION["uname"]." "; 

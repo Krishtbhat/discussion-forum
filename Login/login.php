@@ -78,7 +78,7 @@
             $_SESSION["interest4"] = $get_interests["interest4"];
 
             $_SESSION["usn"] = $usn;	
-            header("Location: http://localhost/ProjectWP/home_page.php");
+            header("Location: http://localhost/ProjectWP/index.php");
         }
         else{
             echo "<script type='text/javascript'>alert('USN or Password is incorrect'); </script>";

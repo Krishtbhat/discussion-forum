@@ -18,7 +18,7 @@ session_start();
 	$k="INSERT INTO questions(question,reported,name,year2,topic2)VALUES('$g','FALSE','$i','$a','$e')";
 	$succ=mysqli_query($conn,$k);
 	if($succ)
-	header("Location: http://localhost/ProjectWP/home_page.php");
+	header("Location: http://localhost/ProjectWP/index.php");
 	else 
 		echo"<h2>Check Your Connection</h2>";
 	unset($_POST['name1']);
