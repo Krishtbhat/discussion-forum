@@ -3,13 +3,16 @@
 
   //  if(isset($_SESSION["usn"]) || isset($_SESSION["uname"])){
     //    session_destroy();
-    //} 
+	//} 
+	if(isset($_SESSION['usn']) || isset($_SESSION['uname'])) {
+		header("Location: ../");
+	}
     
     if(isset($_POST["signin"])){
 
         $db="bdf";
         $username="root";
-        $password="root";
+        $password="";
         $server="localhost";
         $conn=mysqli_connect($server,$username,$password,$db);	
         if(!$conn)
@@ -78,11 +81,11 @@
             $_SESSION["interest4"] = $get_interests["interest4"];
 
             $_SESSION["usn"] = $usn;	
-            header("Location: http://localhost/ProjectWP/index.php");
+            header("Location: ../");
         }
         else{
             echo "<script type='text/javascript'>alert('USN or Password is incorrect'); </script>";
-            header("Refresh:0; url = http://localhost/ProjectWP/Login/login.php");
+            header("Refresh:0; url = ./login.php");
         }
         mysqli_close($conn);
     }
@@ -94,10 +97,10 @@
 <head>
 	<title>Login and signup</title>
 
- 	 <script language="javascript" type="text/javascript">
+ 	 <!-- <script language="javascript" type="text/javascript">
 		window.history.forward();
 		window.onunload = function(){null};
-	 </script>
+	 </script> -->
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -134,7 +137,7 @@
 		<div class="container-login100" style="background-image: url('bms college.jpg');">
 			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
 				<center><h2><u>Discussion Forum</u></h2></center><br/>
-				<form class="login100-form validate-form flex-sb flex-w" action="http://localhost/ProjectWP/Login/login.php" method="post">
+				<form class="login100-form validate-form flex-sb flex-w" action="./login.php" method="post">
 					<span class="login100-form-title p-b-53">
 						Sign In With
 					</span>
@@ -176,7 +179,7 @@
 							Not a member?
 						</span>
 
-						<a href="http://localhost/ProjectWP/Login/signup.php" class="txt2 bo1">
+						<a href="./signup.php" class="txt2 bo1">
 							&nbsp;Sign up now
 						</a>
 					</div> 

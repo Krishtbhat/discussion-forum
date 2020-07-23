@@ -19,11 +19,11 @@
             else {
                 echo "<script type='text/javascript'>alert('There was an error uploading the image!!');</script>";
             }
-            header("Refresh:0; url=http://localhost/ProjectWP/settings_page.php");
+            header("Refresh:0; url=./settings_page.php");
         }
 
         else{
-            header("Refresh:0; url=http://localhost/ProjectWP/settings_page.php");
+            header("Refresh:0; url=./settings_page.php");
             echo "<script type='text/javascript'>alert('Please choose a picture!');</script>";
         }
     }
@@ -33,7 +33,7 @@
         $sql2 = "UPDATE images SET image='profile-blank.png' WHERE id=$uid;";
         mysqli_query($conn, $sql2);
 
-        header("Refresh:0; url=http://localhost/ProjectWP/settings_page.php");
+        header("Refresh:0; url=./settings_page.php");
 
     }
 

@@ -42,7 +42,7 @@
 			
 			function logout_func(){
 				if(confirm("Do you want to Logout?") === true){
-					window.location.replace("http://localhost/ProjectWP/Login/logout.php");
+					window.location.replace("./Login/logout.php");
 					
 				} 
 			}
@@ -71,11 +71,11 @@
 		  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
 			  <li class="nav-item pl-md-4 mx-2 order-sm-1">
-				<a class="nav-link " href="http://localhost/ProjectWP/index.php"><span><i class="fa fa-home"></i></span>&nbsp;Home <span class="sr-only">(current)</span></a>
+				<a class="nav-link " href="./"><span><i class="fa fa-home"></i></span>&nbsp;Home <span class="sr-only">(current)</span></a>
 			  </li>
 		
 			  <li class="nav-item mx-2  order-sm-2">
-				<a class="nav-link " href="http://localhost/ProjectWP/profile_page.php" id="navbarDropdownMenuLink" ><span><i class="fa fa-user"></i></span>&nbsp;<?php echo $_SESSION["uname"]."&nbsp;";
+				<a class="nav-link " href="./profile_page.php" id="navbarDropdownMenuLink" ><span><i class="fa fa-user"></i></span>&nbsp;<?php echo $_SESSION["uname"]."&nbsp;";
 				
 				if($get_path!=""){ echo "<img class='navbar-item ml-1 rounded-circle' width='30' height='30' src='images/".$get_path."' alt='user'>"; }
 				else { echo "<img class='navbar-item ml-1 rounded-circle' width='30' height='30' src='images/profile-blank.png' alt='user'>";}
@@ -88,7 +88,7 @@
 			<ul class="navbar-nav mx-md-2 ml-2 order-sm-3 order-md-4">
 				<li class="nav-item order-sm-1 order-md-1">
 					
-					<a class="nav-link active" href="http://localhost/ProjectWP/settings_page.php"><i class="fa fa-wrench"></i>&nbsp;Account Settings</a>
+					<a class="nav-link active" href="./settings_page.php"><i class="fa fa-wrench"></i>&nbsp;Account Settings</a>
 		
 				</li> </ul>
 			<ul class="navbar-nav ml-md-2 ml-2 justify-content-end order-sm-3 order-md-4">
@@ -181,7 +181,7 @@
 
 			<ul class="list-group list-group-flush bg-light">
 			  <li class="list-group-item bg-light border-0">
-				<form class="form-inline" action="http://localhost/ProjectWP/settings_1.php" method="post">
+				<form class="form-inline" action="./settings_1.php" method="post">
 				  <label class="my-1 mr-2" for="sel1"><i class="fa fa-pencil"></i>&nbsp;Change Year:&nbsp;</label>
 				  <select class="custom-select my-1 btn-light mr-sm-2" id="sel1" name="sel1">
 					<option value="First" id="one">&nbsp;First&nbsp;</option>
@@ -454,7 +454,7 @@
 				<p class="lead mt-3 mb-1 ml-2">Update Password</p>
 			</div>
 			<ul class="list-group list-group-flush bg-light">
-			  <form action="http://localhost/ProjectWP/settings_3.php" method="post" class="form-inline">
+			  <form action="./settings_3.php" method="post" class="form-inline">
 			  <li class="list-group-item bg-light my-1 border-0">
 				<div class="form-group">
 					<label for="curPass">Current Password:</label>

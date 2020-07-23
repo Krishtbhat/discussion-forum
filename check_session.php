@@ -1,7 +1,7 @@
 <?php
 
     if(!(isset($_SESSION["usn"]) || isset($_SESSION["uname"]))){
-        header("Refresh:0; url=http://localhost/ProjectWP/Login/login.php");
+        header("Refresh:0; url=./Login/login.php");
         exit();
     }
 

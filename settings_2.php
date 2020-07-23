@@ -22,6 +22,6 @@
 		mysqli_query($conn, $sq3);
 	} 
 
-	header("Refresh:0; url=http://localhost/ProjectWP/settings_page.php");
+	header("Refresh:0; url=./settings_page.php");
 
 ?>

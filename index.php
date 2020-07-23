@@ -3,7 +3,7 @@
 	$db="bdf";
 	$server="localhost";
 	$username="root";
-	$password="root";
+	$password="";
 	$conn=mysqli_connect($server,$username,$password,$db);
 	if(!$conn)
 		echo "Failed to establish connection ";
@@ -103,9 +103,9 @@
 	</div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav "> 
-        <li class="navbar-item active"><a href="http://localhost/ProjectWP/index.php"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
+        <li class="navbar-item active"><a href="./"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
         <li class="navbar-item">
-			<a href="http://localhost/ProjectWP/profile_page.php" class="nav-link"><span class="glyphicon glyphicon-user"></span> 
+			<a href="./profile_page.php" class="nav-link"><span class="glyphicon glyphicon-user"></span> 
 			<?php echo $_SESSION["uname"]." "; 
 				$img = $_SESSION["image_name"];
 				if($img!=""){
@@ -120,17 +120,17 @@
 	  </ul>
      <ul class="nav navbar-nav navbar-right">
 	  	<li class="navbar-item">
-		<a href="http://localhost/ProjectWP/settings_page.php" style="margin-right:10px;">
+		<a href="./settings_page.php" style="margin-right:10px;">
 		<span class="glyphicon glyphicon-wrench"></span>&nbsp;Account Settings
 		</a></li>
 		<li class="navbar-item">
-		<a href="http://localhost/ProjectWP/Login/logout.php" style="margin-right:15px;">
+		<a href="./Login/logout.php" style="margin-right:15px;">
 		<span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout
 		</a></li>
     <ul class="dropdown-menu">
-        <li class="active"><a tabindex="-1" href="http://localhost/ProjectWP/profile_page.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+        <li class="active"><a tabindex="-1" href="./profile_page.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
         <li class="divider"></li>
-        <li><a tabindex="-1" href="http://localhost/ProjectWP/settings_page.php"><span class="glyphicon glyphicon-wrench"></span> Settings</a></li>
+        <li><a tabindex="-1" href="./settings_page.php"><span class="glyphicon glyphicon-wrench"></span> Settings</a></li>
 		<li class="divider"></li>
 		<li><a href="Login/logout.php" name="logout" tabindex="-1" class="" ><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a></li>
     </ul>
@@ -187,12 +187,12 @@
              foreach($success as $bb)			   
 			   echo $bb;
 		 ?></h5></div>
-       &nbsp;&nbsp;&nbsp; <a href="http://localhost/ProjectWP/settings_page.php"><span class="glyphicon glyphicon-edit">Edit</a>
+       &nbsp;&nbsp;&nbsp; <a href="./settings_page.php"><span class="glyphicon glyphicon-edit">Edit</a>
       </div>
 	  <!-- End of Profile display-->
 	  <!-- Start  of Interest List-->
       <div class="well">
-        <p><a href="http://localhost/ProjectWP/settings_page.php"><span class="glyphicon glyphicon-edit">Interests</span></a></p>
+        <p><a href="./settings_page.php"><span class="glyphicon glyphicon-edit">Interests</span></a></p>
        <?php 
 	    $b=$_SESSION['uname'];
 		$a="SELECT interest1,interest2,interest3,interest4 FROM user_info WHERE name='$b'";
@@ -214,7 +214,7 @@
       <div class="well">
       <p style="font-size:30;align:center;font-style:italic;">Selection</p>
       <hr/>
-	  <form method="post" action="index.php">
+	  <form method="post" action="./">
        <?php
               $sql="SELECT * FROM 
 	       dependable";
@@ -333,7 +333,7 @@
 						echo "	<div class='row'>
 									<div class='col-sm-12'>
 										<div class='well'>
-											<a href='index.php?reportedq=$temp' style='float:right;color:red;'>Report this question</a>
+											<a href='./?reportedq=$temp' style='float:right;color:red;'>Report this question</a>
 											<br/>
 											<img src='images/".$user_image."' alt='avatar' class='img-circle' height='60' width='60'><br/>".
 											$questionname."
@@ -342,7 +342,7 @@
 											<br/>
 											<button data-toggle='collapse' data-target='$aid' style='float:left;'>Answer this question</button>
 											<div id='$aid1' class='collapse'>
-												<form action='index.php' method='post'>
+												<form action='./' method='post'>
 												<input type = 'hidden' name = 'questionid' value = '".$temp."' />
 												<textarea name='answer$temp' rows='5' cols='60'>Enter your answer
 												</textarea>
@@ -376,15 +376,15 @@
 													</tr>
 													<tr>
 													<td =style='align:center;'>
-													".$upvotes." upvotes <a href='index.php?upvote=$upvotes&id=$id3' style='float:center;'><span class='glyphicon glyphicon-thumbs-up'></span>Upvote</a>
+													".$upvotes." upvotes <a href='./?upvote=$upvotes&id=$id3' style='float:center;'><span class='glyphicon glyphicon-thumbs-up'></span>Upvote</a>
 													&nbsp;&nbsp;&nbsp;&nbsp;
-													<a href='index.php?reported=$id3' style='color:red;'> Report the Answer</a>
+													<a href='./?reported=$id3' style='color:red;'> Report the Answer</a>
 													<br/><br/>
 													</td>
 													</tr>
 													<tr>
 													<td>
-													<form action='index.php' method='post'>
+													<form action='./' method='post'>
 													<input type = 'hidden' name = 'answerid' value = '".$id3."' />
 													<input type = 'text' name= 'com$id3' placeholder='add a comment' />
 													<input type = 'submit' value = 'Post' name='postthecomment'/>

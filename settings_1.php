@@ -32,6 +32,6 @@
         $_SESSION["interest4"] = $int4;
 
         echo "<script type='text/javascript'> alert('Info Updated Succesfully!!'); </script>";
-        header("Refresh:0; url=http://localhost/ProjectWP/settings_page.php");
+        header("Refresh:0; url=./settings_page.php");
     }
 ?>

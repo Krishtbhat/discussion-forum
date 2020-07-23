@@ -2,7 +2,7 @@
     session_start();
         
         if(session_destroy()){
-            header("Location: http://localhost/ProjectWP/Login/login.php");
+            header("Location: ../");
         } else {
             header("Refresh:0; ");
         }

@@ -38,11 +38,11 @@
             $sql2 = "UPDATE login SET pwd='$new_pass' WHERE usn='$get_usn';";
              mysqli_query($conn , $sql2);
             echo "<script type='text/javascript'> alert('Password updated successfully!!'); </script>";
-            header("Refresh:0; url=http://localhost/ProjectWP/settings_page.php");
+            header("Refresh:0; url=./settings_page.php");
 
         } else {
             echo "<script type='text/javascript'> alert('Passwords not matching!!')</script>";
-            header("Refresh:0; url=http://localhost/ProjectWP/settings_page.php");
+            header("Refresh:0; url=./settings_page.php");
         }
         
     }
@@ -50,12 +50,12 @@
 
         if($cur_pass == ""){
             echo "<script type='text/javascript'> alert('Password field is empty!!'); </script>";
-            header("Refresh:0; url=http://localhost/ProjectWP/settings_page.php");
+            header("Refresh:0; url=./settings_page.php");
 
         }
         else{
             echo "<script type='text/javascript'> alert('Current Password is wrong!!'); </script>";
-            header("Refresh:0; url=http://localhost/ProjectWP/settings_page.php");
+            header("Refresh:0; url=./settings_page.php");
         }
     }
 

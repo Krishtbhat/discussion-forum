@@ -2,15 +2,15 @@
 	
 	session_start();
 
-//	if(isset($_SESSION["usn"]) || isset($_SESSION["uname"])){
-//		session_destroy();
-//    }
+	if(isset($_SESSION['usn']) || isset($_SESSION['uname'])) {
+		header("Location: ../");
+	}
 
 	if(isset($_POST["signup"])){
 		$db="bdf";
 		$server="localhost";
 		$username="root";
-		$password="root";
+		$password="";
 		$conn=mysqli_connect($server,$username,$password,$db);
 		if(!$conn)
 			echo "<h2>Failed to establish connection </h2>";
@@ -68,7 +68,7 @@
 		$sql6 = "INSERT INTO comments(id3, name) VALUES ($id3, '$un');";
 		$h = mysqli_query($conn, $sql6);  */
 		
-		header("Location: http://localhost/ProjectWP/settings_page.php");
+		header("Location: ../settings_page.php");
 
 	}
 
@@ -79,10 +79,10 @@
 <head>
 	<title>Login and signup</title>
 
-	<script  type="text/javascript">
+	<!-- <script  type="text/javascript">
 		window.history.forward();
 		window.onunload = function(){null};
-	</script>
+	</script> -->
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -117,7 +117,7 @@
 		<div class="container-login100" style="background-image: url('bms college.jpg');">
 			<div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
 				<center><h2><u>Discussion Forum BMSCE</u></h2></center><br/>
-				<form class="login100-form validate-form flex-sb flex-w" action="http://localhost/ProjectWP/Login/signup.php" method="post">
+				<form class="login100-form validate-form flex-sb flex-w" action="./signup.php" method="post">
 					<span class="login100-form-title p-b-53">
 						Sign Up
 					</span>
@@ -171,7 +171,7 @@
 						<div class="p-t-31 p-b-9">
 							<label for="sel2"><span class="txt1">Department</span></label>
 						</div>
-							<select class="form-control" id="sel2" name="sel2">
+							<select class="form-control wrap-input100 input100" id="sel2" name="sel2">
 								<option value="CSE" id="cse0" name="cse0">Computer Science and Engineering</option>
 								<option value="ISE" id="ise0" name="ise0">Information Science and Engineering</option>
 								<option value="ECE" id="ece0" name="ece0">Electronics and Communications Engineering</option>
@@ -190,7 +190,7 @@
 						<div class="p-t-31 p-b-9">
 							<label for="sel1"><span class="txt1">Year</span></label>
 						</div>
-							<select class="form-control" id="sel1" name="sel1">
+							<select class="form-control wrap-input100 input100" id="sel1" name="sel1">
 								<option value="First" id="one">1</option>
 								<option value="Second">2</option>
 								<option value="Third">3</option>
@@ -207,7 +207,7 @@
 							Already have an account?
 						</span>
 
-						<a href="http://localhost/ProjectWP/Login/login.php" class="txt2 bo1">
+						<a href="./login.php" class="txt2 bo1">
 							&nbsp;Sign in now
 						</a>
 					</div>

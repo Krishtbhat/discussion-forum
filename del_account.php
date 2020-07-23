@@ -82,7 +82,7 @@
             }
 
             echo "<h1 class='mt-4 ml-2'>Your Account was deleted successfully !!  </h1><br/>";
-            echo "<a href='http://localhost/ProjectWP/Login/logout.php' class='btn btn-primary ml-4'>Go to Login page</a>";
+            echo "<a href='./Login/logout.php' class='btn btn-primary ml-4'>Go to Login page</a>";
 
         } else {
             echo "<h1> Error deleting the records !!! </h1>";
@@ -90,7 +90,7 @@
     }
 
     else{
-        header("Refresh:0; url=http://localhost/ProjectWP/settings_page.php");
+        header("Refresh:0; url=./settings_page.php");
     }
 
     session_unset();

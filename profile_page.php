@@ -79,7 +79,7 @@
   <div class="container-fluid">
     <div class="navbar-header navbar-item mr-3">
 		
-      <a class="navbar-brand navbar-item p-2" href="#" style="padding:2;"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/87/BMS_College_of_Engineering.svg/1200px-BMS_College_of_Engineering.svg.png" width="30" height="30" class="navbar-left" alt="">&nbsp;Discussion Forum</a>
+      <a class="navbar-brand navbar-item p-2" href="./" style="padding:2;"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/87/BMS_College_of_Engineering.svg/1200px-BMS_College_of_Engineering.svg.png" width="30" height="30" class="navbar-left" alt="">&nbsp;Discussion Forum</a>
 	  
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -90,9 +90,9 @@
 	</div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav"> 
-        <li class="navbar-item"><a href="http://localhost/ProjectWP/index.php"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
+        <li class="navbar-item"><a href="./"><span class="glyphicon glyphicon-home"></span>&nbsp;Home</a></li>
         <li class="navbar-item active">
-			<a href="http://localhost/ProjectWP/profile_page.php" class="nav-link"><span class="glyphicon glyphicon-user"></span> 
+			<a href="./profile_page.php" class="nav-link"><span class="glyphicon glyphicon-user"></span> 
 			<?php echo $_SESSION["uname"]." "; 
 				$img = $_SESSION["image_name"];
 				if($img!=""){
@@ -107,17 +107,17 @@
 	  </ul>
      <ul class="nav navbar-nav navbar-right">
 	  	<li class="navbar-item">
-		<a href="http://localhost/ProjectWP/settings_page.php" style="margin-right:10px;">
+		<a href="./settings_page.php" style="margin-right:10px;">
 		<span class="glyphicon glyphicon-wrench"></span>&nbsp;Account Settings
 		</a></li>
 		<li class="navbar-item">
-		<a href="http://localhost/ProjectWP/Login/logout.php" style="margin-right:15px;">
+		<a href="./Login/logout.php" style="margin-right:15px;">
 		<span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout
 		</a></li>
     <ul class="dropdown-menu">
-        <li class="active"><a tabindex="-1" href="http://localhost/ProjectWP/profile_page.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+        <li class="active"><a tabindex="-1" href="./profile_page.php"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
         <li class="divider"></li>
-        <li><a tabindex="-1" href="http://localhost/ProjectWP/settings_page.php"><span class="glyphicon glyphicon-wrench"></span> Settings</a></li>
+        <li><a tabindex="-1" href="./settings_page.php"><span class="glyphicon glyphicon-wrench"></span> Settings</a></li>
 		<li class="divider"></li>
 		<li><a href="Login/logout.php" name="logout" tabindex="-1" class="" ><span class="glyphicon glyphicon-log-out"></span>&nbsp;Logout</a></li>
     </ul>
